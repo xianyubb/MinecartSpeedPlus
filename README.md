@@ -1,35 +1,52 @@
-# LeviLamina Mod Template
+# MinecartSpeedPlus
 
-A LeviLamina mod template
+**此插件为私人定制 未经允许禁止擅自修改发布**  
 
-This mod is a template for developing LeviLamina mods.
+## 介绍
 
-## Install
+双击矿车更改矿车速度
 
-Generate a new repository from this template.
+### 功能列表
 
-## Usage
+- [x] 配置套餐 自定义套餐
+- [x] 支持计分板经济系统
+- [x] 可以快速破坏矿车
+- [x] 矿车速度非全局生效
+- [x] 支持充能铁轨
+- [ ] 修复充能铁轨未充能时有机率触发加速
 
-Before using this mod template, make sure that you have installed XMake and a Minecraft Bedrock Server with LeviLamina.
+## 安装
 
-1. Clone the new repository into a local folder.
+- 使用 Lip 安装
 
-1. Change the mod name and the expected LeviLamina version in `xmake.lua`.
+    ```bash
+    lip install github.com/xianyubb/MinecartSpeedPlus
+    ```
 
-1. Add your code.
+- 下载插件包
 
-1. Run `xmake repo -u` in the root of the repository.
+    [release](https://github.com/xianyubb/MinecartSpeedPlus/releases)
 
-1. Run `xmake` to build the mod.
+    > 请注意下载对应 LeviLamina 版本的插件版本
 
-Now the build is complete at `bin/`.
+## 配置文件
 
-## Contributing
+```json
+{
+    "version": 2, // 勿动
+    "ScoreName": "money", // 计分板名称
+    "moveMentList": [
+        // 初始化为空数组
+        {
+            "name": "1", // 按钮显示名称
+            "speed": 10, // 该套餐的速度
+            "money": 0 // 兑换套餐所需积分
+        }
+    ]
+}
+```
 
-Ask questions by creating an issue.
+## Tips
 
-PRs accepted.
-
-## License
-
-CC0-1.0 © LiteLDev
+作者: xianyubb
+QQ: 2149656630
